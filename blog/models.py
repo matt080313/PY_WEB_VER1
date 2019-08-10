@@ -13,7 +13,7 @@ class Post(models.Model):
     create_date = models.DateTimeField('Create Date',
                                        auto_now_add=True,
                                        blank=True, null=True)
-    modify_date = models.DateTimeField('Modify Date',
+    modify_datee = models.DateTimeField('Modify Date',
                                        auto_now=True,
                                        blank=True, null=True)
 
