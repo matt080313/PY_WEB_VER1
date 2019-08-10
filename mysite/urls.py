@@ -17,15 +17,20 @@ from django.conf.urls import url
 from django.contrib import admin
 from mysite.views import IndexView
 from bookmark.views import BookmarkLV, BookmarkDV
-from blog.views import PostLV
+from blog.views import PostLV, PostDV
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view(), name="index"),
-    url(r'^bookmark/$', BookmarkLV.as_view(),name='bookmark_index'),   #http://127.0.0.1:8000/bookmark
+    url(r'^bookmark/$', BookmarkLV.as_view(), name='bookmark_index'),   #http://127.0.0.1:8000/bookmark
     url(r'^bookmark/(?P<pk>\d+)/$', BookmarkDV.as_view(), name="detail"),
+
+
     url(r'^blog/$', PostLV.as_view(),
-        name='blog_index')
+        name='blog_index'),
+
+
+    url(r'^blog/(?P<pk>\d+)/$', PostDV.as_view(), name='blog_detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
