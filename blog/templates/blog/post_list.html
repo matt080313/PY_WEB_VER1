@@ -8,7 +8,7 @@
     <style>
         .box{
         width:400px; height:auto;
-        border: 1px solid lightgray:
+        border: 1px solid red:
         border-radius: 5px;
         display: inline-block;
         margin-left:50px;
@@ -46,20 +46,24 @@
         font-family: 'Pattaya', sans-serif;
         color:orangered;
         }
+        div{
+        border: 10px double red
     </style>
 
 </head>
 <body>
 
 <div id="content">
-    <h1 id="title">Blog <span id="title_small">made with Django</span></h1>
-
+    <h1 id="title">Game Tips<span id="title_small">Blog</span></h1>
+    <h3 class="text-center"><a href="{% url 'blog_add' %}">Generate</a></h3>
+    <h3 class="text-center"><a href="{% url 'index' %}">Back to main page</a></h3>
+    <h3 class="text-center"><a href="{% url 'blog_change_list' %}">My Post(unavailable)</a></h3>
 
     {% for post in object_list %}
     <div class="box">
         <p class="box_title">{{ post.title }}</p>
         <div class="imgBox">
-            <img src="{{ post.image.url }}">
+            <a href="{% url 'blog_detail' post.id %}"><img src="{{ post.image.url }}"></a>
         </div>
         <p class="description"><span class="label">Description:</span>{{ post.description }}</p>
         <p><span class="label">Create Date:</span>{{ post.create_date }}</p>

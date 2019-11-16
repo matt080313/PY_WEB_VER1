@@ -1,50 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        h1{color:blue;text-align:center;}
-        h2{color:skyblue;text-align:center;background-color:aqua}
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container-fluid" id="content">
+        <video autoplay loop muted>
+            <source src="{% static 'video/Roblox.mp4' %}" type="video/mp4">
+        </video>
+        <div class="container-fluid main_text" id="text1">
+        <h1 id="title">DJANGO FRAMEWORK</h1>
+    </div>
+    <div class="contaimer-fluid main_text" id="text2">
+        <h1 id="made">Made By <span id="username">Matt</span> &amp; <span id="Dlab">DLAB</span></h1>
+    </div>
+    </div>
+<h2>About me</h2>
+<p>My name is matt080313, a roblox user. I really love roblox and i can play some hard and complex games.
+but i saw many people doesn't know how to play and just exiting awesome games, so i've made blog and
+tips to let you share ideas with others, me, or friends, and telling some game or tips that you want
+me to make a site. currently there aren't much content, but your posting on blog can give me some things
+that people want to see here. some tip site's game is not popular but known by me. if you have any useful tips
+    and game information, please post them at the blog. Thank you.</p>
+<h3>My favorite games</h3>
+<p>I have experienced many sandbox type tycoons and complex, hard-to-understand games, so i almost always know
+how to play when io join a game. i love some typical tycoons different from others. tycoons are normally just
+buttons and just money making. some special tycoon games io loved are like Resource Factory Tycoon, Factory
+Town Tycoon, Miner's heaven. these are sandbox-type tycoons which you can place conveyors and droppers freely
+anywhere in your plot. but i especially loved Resource factory tycoon and Factory town tycoon. Miner's heaven's
+droppers are very normal, just like a real dropper. Nothing inserted but making thing inside it. But, Resource
+factory tycoon and factory town tycoon was different.<br>
+    <strong>Resource Factory Tycoon</strong><br>
+Resource Factory Tycoon was one of tycoon i especially loved, which are not just droppers. You place mines at
+ores and active robots to take ores from there to "Factory". and the "Factory" will produce item. you have to
+place conveyors front there and put them into storage or another "Factory". you can sell your items at warehouse,
+make money to build better factory and house. Some factory can produce items you can use, or finding secrets.
+also, its not just an end with producing a thing, you can also produce thing with produced thing. like example,
+you can use steel from steel factory which can be produced with metal, and electronics from electronics factory
+which can be produced by copper, to produce a engine. using these factories, you can even make more complex
+productions like robots from steel, computer chip, tires, fuel cell, and engine.<br>
+<strong>Factory Town Tycoon</strong><br>
+Factory town tycoon were also one i especially loved, similiar to resource factory tycoon but very typical.
+you build buildings with materiels, not just buying from store. also, you chop tree and put them to crafting
+lines. for example, putting a log in 2 connected electric saw will result 3 planks. also putting spacer and
+carpenter at end and putting there some nails will result wood frame. using lines with this and some machines
+like garden beds and auto harvester, mining drill, smelter, carpenter, blacksmith, conveyors can automate items.
+but its an hard work. since mining drill needs fire log and drill head, you'll also need drill head production
+and firelogs production. smelters also need firelogs. so complex to automate items. sadly you must buy
+seeds yourself so it cannot be "Complety" automated.its very nice game but hard. but, you build the production
+with your own ideas. that is the point of the game.<br>
+<strong>Critical Strike</strong><br>
+Critical strike is very advanced combat game, which is completly different with ordinary roblox combat games
+which is just a sword and gun. this one, there are many cool action support skills and some buffs and de buffs
+and also special classes and badges, events. anyways, its hard to explain, you should try playing it yourself.
+its very cool action-packed game. or maybe i have to say "Very exciting"?</p>
+{% endblock content %}
 
 
-
-
-
-    </style>
-</head>
-<body>
-<h1 id="title">Django Main Page</h1>
-<h2 class="link"><a href="{% url 'bookmark_index' %}">북마크 앱(Bookmark App)</a></h2>
-<h2 class="link"><a href="{% url 'blog_index' %}">블로그 앱(Blog App)</a></h2>
-<h3> 당신의 컴퓨터는 해킹되었다.</h3>
-<pre>10101011011001010100100010010010101010101010101010100101010101010100101010101010010101010101010100101010001010100101010101010101
-10101010101011010010110100101010100100101011001001011010101010001010101001001010011001001010110101010001010101011011010101011001010
-01010101010101010100100110010010101010101011011010101001010100101010101001010101001010010101010110101010010101011001010101101010101
-10101101010010101010010010010010010100100110010101001010101101010010101010101010110010101010101010010101011001101011011010101010101
-10101000101010110101010101010010101010101010101010100101011100101001010100101010101110100101011001001010101100100100101010101010100
-10010101010101010101010101010110110101011011010101010101010101010100101010101010100110111010100101010011010010110100110101010011010
-10101010101010010101010101001010101010100101010101010101001010101001010100101010101010001010010010010101011000101001101010100100101
-10101010101010110010101010010101001010101010101100100101000101010101010101010010101001100101010100101011001010101010100101010101010
-10100101010110010101010010101010101010101010101010100101010101010101010110101010010101010101010101010101010101010110101010110101101
-10101010010101010110101001101010101010100110010110010155010101010101010101010011010101010101010101010101010011010101010101010101010
-10101010101010101010101101101010010101010101101510101015   5   50101010010101010010101010101101010101000101010100101010101010110101
-10101010101010100101010101001010110110010101015 5011005  55055  5010101010010101010100010101010100101001010101001010010101010100101
-1010101001010101010011001010101010101010101015   5010155510101555010101010110101101001001010100101010101010110110100101010101010100
-1101010011001010110100101010101010101010101015   5010100101011010100101010101010101010101101101010101001010101010101101010101001010
-101010101010101001101010101001010101055555555     555555510101010011001011010010101010101010101010101010110101010100101010101010101
-101010101001010101010101010101010101015                5101010101010100101010101010010101010101010101010101010101001010101010101010
-010101001010101010101010101011010101010555          5550100101001010101010001010110101010101010110010101010010101011010110101010101
-10101001010101010100101010101010101101015      5     510100010101100110100101001001010010010100101010101010101010101010101001010100
-0010100101011010101010010101101001010105     55055    51010101000101010101010100101101001010101010101010101010101010101011101010101
-101010101010101010101010101010101001015   5555555555   5101010001010101001010101010101010101010101001010101001010101010101010101010
-10101010100101010110101010010110100101055510100110105551010101010101001101001010101010101010101010101111001010101010101010101110101
-10101010101010101011010110010101011001010101001010101010101010100101010101010101010101001010101010101100101010101010101010010101010</pre>
-
-
-
-<!-- matt080313 / matt0313! -->
-
-
-</body>
-</html>

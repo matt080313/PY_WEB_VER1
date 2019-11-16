@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -13,9 +13,9 @@ class Post(models.Model):
     create_date = models.DateTimeField('Create Date',
                                        auto_now_add=True,
                                        blank=True, null=True)
-    modify_datee = models.DateTimeField('Modify Date',
+    modify_date = models.DateTimeField('Modify Date',
                                        auto_now=True,
                                        blank=True, null=True)
-
+    owner = models.ForeignKey(User, null=True)
     def __str__(self):
         return self.title

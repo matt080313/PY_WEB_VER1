@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<head>
+    <style>
+        h1{
+        text-align:center;
+        }
+        p{
+        text-align:center;
+        }
+    </style>
+</head>
+<h1><strong>Critical Strike</strong></h1>
+<p>Critical Strike is a cool action packed game which is fun and exciting. Here's information about some classes:<br>
+<strong>Reaper class</strong><br>
+Reaper class is kind of pay-to-win class. its melee class, but also ranged. Q skill will inflict death mark if hit,
+and if you use F skill if somebody is death marked, your character will fly to target and hit 15 true damage(ignores
+defense buff). if you deal damage while enemy is death marked, the damage you dealt will be doubled. E skill
+will increase your speed and become immune to any attack source for 0.5 second.<br>
+<strong>Elementalist class</strong><br>
+Elementalist class can change your class type while in battle. but with small nerf. you can press F to turn on
+changing mode, and you can select element with E and Q, and click to change. if you press F double time, you
+will use super ability of your element, then return to normal element. each elements has different skills and attack.
+    <br><strong>Chrono class</strong><br>
+Chrono class is perfect class for like.... run + attacking? anyways, F skill of chrono will shoot a big clock,
+which will mark enemies. after clock disapper, you'll teleport to marked enemies and deal 15 damage. also, E skill
+will inflict a special de buff which the enemy will return to where it was while moving(Rewind).
+</p>
+{% endblock content %}

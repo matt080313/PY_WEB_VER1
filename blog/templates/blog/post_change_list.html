@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<head>
+    <style>
+        div{
+        border: 10px double red
+        }
+    </style>
+</head>
+<div class="container">
+
+    {% for item in object_list %}
+    <p>{{ item.title }}</p>
+    <p>{{ item.image.url }}</p>
+    <p>{{ item.description }}</p>
+    <a href="{% url 'blog_update' item.id %}">Update</a>
+    <a href="{% url 'blog_delete' item.id %}">Delete</a>
+    {% endfor %}
+
+</div>
+{% endblock content %}

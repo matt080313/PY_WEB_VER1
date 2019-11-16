@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<head>
+    <style>
+        h1{
+            text-align:center;
+        }
+        p{
+            text-align:center;
+        }
+    </style>
+</head>
+<h1><strong>Lua Coding On Roblox</strong></h1>
+<p>Did you know you can create game yourself on roblox, and making a game takes much coding? here's
+simple coding scripts for obbies.<br>
+<strong>Adding a script</strong><br>
+If you press + next to part, search "Script". and then, add it. and that script will get a script.<br>
+<strong>Killing Part</strong><br>
+local part = script.Parent<br>
+local function onTouch(otherPart):<br>
+    local character = otherPart.Parent<br>
+    local humanoid = character:FindFirstChildWhichIsA("Humanoid")<br>
+    if humanoid then:<br>
+        humanoid.Health = 0<br>
+    end<br>
+end<br>
+part.Touched:Connect(onTouch)<br>
+<strong>Speed Buffer</strong><br>
+local part = script.Parent<br>
+local function onTouch(otherPart):<br>
+    character = otherPart.Parent<br>
+    humanoid = character:FindFirstChildWhichIsA("Humanoid")<br>
+    if humanoid then:<br>
+        humanoid.WalkSpeed = 50<br>
+    end<br>
+end<br>
+    part.Touched:Connect(onTouch)<br></p>
+{% endblock content %}
